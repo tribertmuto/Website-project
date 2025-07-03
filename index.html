@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        /* Body styling */
+        body {
+            background-color: red;
+            color: white;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Heading styling */
+        h2 {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            background-color: darkred;
+            margin: 0;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Table styling */
+        table {
+            background-color: red;
+            padding: 20px;
+            border: 1px dotted black;
+            border-radius: 15px;
+        }
+
+        /* Table cell styling */
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+
+        /* Input and textarea styling */
+        input, textarea, select {
+            width: 300px;
+            padding: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        /* Button styling */
+        input[type="submit"], input[type="reset"] {
+            padding: 8px 20px;
+            margin: 10px;
+            font-weight: bold;
+            background-color: white;
+            color: red;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Button hover effect */
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+    <form method="POST" action="register.php">
+  <input type="text" name="first_name" required>
+  ...
+  <input type="submit" value="Register">
+</form>
+
+    <form action="submit.php" method="POST">
+        <table>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" name="first_name" required></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" name="last_name" required></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Mobile</td>
+                <td><input type="text" name="mobile" maxlength="10" required></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="Male" required> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="address" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" name="city" required></td>
+            </tr>
+            <tr>
+                <td>Pin Code</td>
+                <td><input type="text" name="pin_code" maxlength="6" required></td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td><input type="text" name="state" required></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td><input type="text" name="country" required></td>
+            </tr>
+            <tr>
+                <td>Hobbies</td>
+                <td>
+                    <input type="checkbox" name="hobbies[]" value="Drawing"> Drawing
+                    <input type="checkbox" name="hobbies[]" value="Singing"> Singing
+                    <input type="checkbox" name="hobbies[]" value="Dancing"> Dancing
+                    <input type="checkbox" name="hobbies[]" value="Reading"> Reading
+                </td>
+            </tr>
+            <tr>
+                <td>Qualification</td>
+                <td>
+                    <select name="qualification" required>
+                        <option value="">Select Qualification</option>
+                        <option value="High School">High School</option>
+                        <option value="Bachelor's">Bachelor's</option>
+                        <option value="Master's">Master's</option>
+                        <option value="PhD">PhD</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Courses Applied</td>
+                <td>
+                    <input type="checkbox" name="courses_applied[]" value="BCA"> BCA
+                    <input type="checkbox" name="courses_applied[]" value="MCA"> MCA
+                    <input type="checkbox" name="courses_applied[]" value="B.Tech"> B.Tech
+                    <input type="checkbox" name="courses_applied[]" value="M.Tech"> M.Tech
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html> 
